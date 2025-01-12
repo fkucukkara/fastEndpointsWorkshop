@@ -4,6 +4,19 @@
 GET {{API_HostAddress}}/employees
 Accept: application/json
 
+### Add Employee
+POST {{API_HostAddress}}/employees
+Content-Type: application/json
+
+{
+  "body": {
+    "id": 4,
+    "name": "Alice",
+    "department": "Marketing",
+    "designation": "Marketing Specialist"
+  }
+}
+
 ### Get By Id
 GET {{API_HostAddress}}/employee/1
 Accept: application/json

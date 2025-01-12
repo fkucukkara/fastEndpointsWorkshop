@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace API.Employees;
 
-public record AddEmployeeRequest(Employee body);
+public record AddEmployeeRequest(Employee Body);
 
 public class AddEmployeesEndpoint : Endpoint<AddEmployeeRequest, Results<Created<Employee>, BadRequest>>
 {
@@ -17,11 +17,11 @@ public class AddEmployeesEndpoint : Endpoint<AddEmployeeRequest, Results<Created
     {
         await Task.CompletedTask;
 
-        if (req.body is null)
+        if (req.Body is null)
             return TypedResults.BadRequest();
 
 
-        InMemoryRepository.InMemoryEmployeeRepository.Add(req.body);
-        return TypedResults.Created($"/employees/{req.body.Id}", req.body);
+        InMemoryRepository.InMemoryEmployeeRepository.Add(req.Body);
+        return TypedResults.Created($"/employees/{req.Body.Id}", req.Body);
     }
 }
