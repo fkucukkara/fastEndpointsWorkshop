@@ -12,3 +12,5 @@
 /Validator/bin/Debug/net9.0
 /Validator/obj
 /.vs
+/src/API/bin/Debug/net9.0
+/src/API/obj
