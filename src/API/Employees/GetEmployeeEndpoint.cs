@@ -16,8 +16,8 @@ public class GetEmployeeEndpoint : EndpointWithoutRequest<Employee>
         var employee = InMemoryRepository.InMemoryEmployeeRepository.FirstOrDefault(e => e.Id == id);
 
         if (employee is null)
-            await SendNotFoundAsync();
+            await SendNotFoundAsync(ct);
 
-        await SendOkAsync(employee!);
+        await SendOkAsync(employee!, cancellation: ct);
     }
 }

@@ -20,7 +20,7 @@ git clone https://github.com/fkucukkara/fastEndpointsWorkshop.git
 
 ### **2. Navigate to the Project Directory**
 ```bash
-cd your-project-directory
+cd src\API
 ```
 
 ### **3. Build the Project**
